@@ -164,3 +164,74 @@ body {
     opacity: 1;
     filter: grayscale(0%);
 }
+/* --- STILI LISTE E BOTTONI INTERNI (TRUE iOS STYLE) --- */
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    color: var(--text-main);
+}
+
+.ios-list {
+    background-color: var(--white);
+    border-radius: 20px; /* Angoli esterni arrotondati */
+    overflow: hidden; /* Taglia gli angoli interni per seguire il bordo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    margin-bottom: 24px;
+}
+
+.ios-list-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #E5E5EA; /* La classica riga grigia sottile di iOS */
+}
+
+/* Toglie la riga sotto l'ultimo elemento della lista */
+.ios-list-item:last-child {
+    border-bottom: none;
+}
+
+.item-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px; /* Icone quadrate con angoli morbidi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.item-text {
+    flex: 1;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.item-value {
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.ios-primary-button {
+    width: 100%;
+    background-color: var(--ios-blue);
+    color: var(--white);
+    border: none;
+    padding: 18px;
+    border-radius: 16px; /* Bottone grande e arrotondato */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 122, 255, 0.3);
+    transition: transform 0.1s;
+}
+
+.ios-primary-button:active {
+    transform: scale(0.97); /* Effetto "schiacciamento" quando lo tocchi */
+}
+
